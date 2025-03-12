@@ -3,11 +3,15 @@
 <section>
     <div class="hero">
         <video autoplay loop muted playsinline class="bg-video">
-            <source src="../public/videos/background.mp4" type="video/mp4">
+            <source src="videos/background.mp4" type="video/mp4">
             Votre navigateur ne supporte pas les vidéos !  
         </video>
-        <div class="hero-content d-flex align-items-center justify-content-center">
+        <div class="hero-content">
             <h1 class="homeTitle">WEB DEVELOPER</h1>
+            <div class="my-5">
+                <h2 class="homeSecondTitle">Christel</h2>
+                <h2 class="homeSecondTitle">Rodriguez Perez</h2>
+            </div>
         </div>
     </div>
 </section>

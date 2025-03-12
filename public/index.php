@@ -1,10 +1,23 @@
 <?php
 
-require_once __DIR__ . '/../vendor/autoload.php';
-
-
 use app\core\Router;
 use app\controllers\PortfolioController;
+
+require_once __DIR__ . '/../vendor/autoload.php';
+require_once __DIR__ .'/../app/core/Router.php';
+
+//Vérifie si c'est un fichier statique et le sert directement
+$path = parse_url($_SERVER["REQUEST_URI"], PHP_URL_PATH);
+$file = __DIR__ . '/public' . $path;
+
+if (file_exists($file) && is_file($file)) {
+    //Définit le bon type MIME avant de servir le fichier
+    $mimeType = mime_content_type($file);
+    header("Content-Type: $mimeType");
+    readfile($file);
+    exit;
+}
+
 
 // Initialisation du routeur
 $router = new Router();

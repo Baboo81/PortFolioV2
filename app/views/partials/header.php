@@ -17,20 +17,19 @@
 		integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
 		crossorigin="" />
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-        <link rel="stylesheet" href="/public/css/<?= $resetCss ?>">
-        <link rel="stylesheet" href="/public/css/<?= $css ?>">
+        <link rel="stylesheet" href="/css/<?= $resetCss ?>">
+        <link rel="stylesheet" href="/css/<?= $css ?>">
         <!--Script Leaflet-->
         <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
         <!--Scripts, framework JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" defer></script>
-        <script src="/public/js/main.js" defer ></script>
+        <script src="/js/main.js" defer ></script>
         <title><?= $title ?></title>
     </head>
     <body>  
         <header>
-            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <nav class="navbar navbar-expand-lg d-flex justify-content-center justify-items-center">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="#">Navbar</a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -50,6 +49,9 @@
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#">Certifications</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Contact</a>
                             </li>
                         </ul>
                     </div>

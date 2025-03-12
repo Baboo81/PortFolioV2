@@ -10,12 +10,44 @@
     --beige : #f8f3e9;
 }
 
+body
+{
+    min-height: 2000px;
+}
+
+/* NavBar */
+
+.navbar
+{
+    margin-top: 2%;
+    background-color: var(--bleuVert);
+    border-radius: 25px;
+    position: fixed;
+    top: 10;
+    left: 33%;
+    z-index: 1000;
+}
+
+.navbar li a
+{
+    color: var(--beige);
+    font-size: 2rem;
+}
+/* END NavBAR*/
+
 .homeTitle
 {
     /*font-family: "Yrsa", serif;*/
     font-family: "Bodoni Moda", serif;
     font-size: 3rem;
     color: var(--beige);
+}
+
+.homeSecondTitle
+{
+    font-family: "Bodoni Moda", serif;
+    font-size: 3rem;
+    color: var(--bleu);
 }
 
 p
