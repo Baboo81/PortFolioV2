@@ -59,27 +59,35 @@ function ballAnimate1 () {
 
 requestAnimationFrame(ballAnimate1);
 
-//Script pour adapter la taille des sections en fonction de la taille de la fenêtre du navigateur:
-const sections = document.querySelectorAll('section');
+//Chargement des pages  
+let sections = ["home", "about", "skills", "picto", "stage", "certif"];
 
-for (sections; sections < 4; sections++ ) {
-    let sizeWindow = window.matchMedia("(width : 2003px)");
-
-    switch (sizeWindow) {
-        case window.matchMedia("(width : 1900px)"): 
-         style.marginTop = "0%";
-            break;
-        case window.matchMedia("(width : 1400px)"):
-        style.marginTop = "-150%";
-            break;
-        case window.matchMedia("(width : 1000px)"):
-        style.marginTop = "-200%";
-            break;
-        case window.matchMedia("(width : 600px)"):
-        style.marginTop = "-250%";
-            break;
-        case window.matchMedia("(width : 500px)"):
-        style.marginTop = "-300%";
-            break;
+//Fonction pour charger le contenu de chaque section
+function loadSection(section) {
+    //Vérifie que la section fait partie des sections valides
+    if (sections.includes(section)) {
+        //Utilise fetch pour récupérer le contenu de la section
+        fetch(`sections/${section}.php`)
+            .then(response => response.text())
+            .then(data => {
+                //Insérer le contenu dans la div avec l'id "dynamic-section"
+                document.getElementById("dynamic-section").innerHTML = data;
+            })
+            .catch(error => {
+                console.error('Erreur de chargement de la section:', error);
+            });
     }
 }
+
+// Attache l'événement au clic de chaque lien
+document.querySelectorAll("nav a").forEach(link => {
+    link.addEventListener("click", function(event) {
+        event.preventDefault();
+        
+        // Récupère le nom de la section depuis l'attribut data-section du lien
+        let sectionName = this.getAttribute("data-section");
+
+        // Charge la section correspondante
+        loadSection(sectionName);
+    });
+});

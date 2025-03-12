@@ -1,6 +1,6 @@
 <?php include __DIR__ . '/../partials/header.php'; ?>
 
-<section>
+<section id="home">
     <div class="hero">
         <video autoplay loop muted playsinline class="bg-video">
             <source src="videos/background.mp4" type="video/mp4">
@@ -14,6 +14,9 @@
             </div>
         </div>
     </div>
+</section>
+<section id="sections-container">
+
 </section>
 
 <?php include __DIR__ . '/../partials/footer.php'; ?>

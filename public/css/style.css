@@ -19,7 +19,7 @@ body
 /* NavBar */
 
 .navbar
-{
+{ 
     position: relative;
     margin-top: 2%;
     background-color: var(--bleuVert);

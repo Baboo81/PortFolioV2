@@ -27,34 +27,34 @@
         <title><?= $title ?></title>
     </head>
     <body>  
-        <header>
-            <nav class="navbar navbar-expand-lg d-flex justify-content-center justify-items-center">
+        <header class="d-flex justify-content-center">
+            <nav class="navbar navbar-expand-lg">
                 <div class="container-fluid">
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <ul class="navbar-nav mb-2 mb-lg-0">
                             <li class="nav-item mx-5">
-                                <a class="nav-link active" aria-current="page" href="#">Accueil</a>
+                                <a class="nav-link active" aria-current="page" href="#" data-section="home">Accueil</a>
                             </li>
                             <li class="nav-item mx-5">
-                                <a class="nav-link" href="#">Projets</a>
+                                <a class="nav-link" href="#" data-section="about">Qui suis-je ?</a>
                             </li>
                             <li class="nav-item mx-5">
-                                <a class="nav-link" href="#">Pictos</a>
+                                <a class="nav-link" href="#" data-section="skills">Skills</a>
                             </li>
                             <li class="nav-item logo-container mx-5">
                                 <img src="/img/logo/Logo.svg" class="logo" alt="Logo du site">
                             </li>
                             <li class="nav-item mx-5">
-                                <a class="nav-link" href="#">Stage</a>
+                                <a class="nav-link" href="#" data-section="picto">Pictos</a>
                             </li>
                             <li class="nav-item mx-5">
-                                <a class="nav-link" href="#">Certifications</a>
+                                <a class="nav-link" href="#" data-section="stage">Stage</a>
                             </li>
                             <li class="nav-item mx-5">
-                                <a class="nav-link" href="#">Contact</a>
+                                <a class="nav-link" href="#" data-section="certif">Certifications</a>
                             </li>
                         </ul>
                     </div>
