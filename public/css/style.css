@@ -7,15 +7,49 @@
     --bleuVert : #38727c;
     --bleu : #b2d5e3;
     --gris : #e2e2e2;
-    --bige : #f8f3e9;
+    --beige : #f8f3e9;
 }
 
 .homeTitle
 {
-    font-family: "Yrsa", serif;
+    /*font-family: "Yrsa", serif;*/
+    font-family: "Bodoni Moda", serif;
+    font-size: 3rem;
+    color: var(--beige);
 }
 
 p
 {
     font-family: "Bodoni Moda", serif;
 }
+
+/* Section : home */
+section .hero
+{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+section .bg-video
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    z-index: 1;
+}
+
+section .hero-content
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 2;
+}
+/* END Section : home */
