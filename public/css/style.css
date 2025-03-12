@@ -1,0 +1,21 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Yrsa:ital,wght@0,300..700;1,300..700&display=swap');
+
+:root
+{
+    --bleuC : #d7e8e3;
+    --bleuVert : #38727c;
+    --bleu : #b2d5e3;
+    --gris : #e2e2e2;
+    --bige : #f8f3e9;
+}
+
+.homeTitle
+{
+    font-family: "Yrsa", serif;
+}
+
+p
+{
+    font-family: "Bodoni Moda", serif;
+}
