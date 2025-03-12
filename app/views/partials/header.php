@@ -35,22 +35,25 @@
                     </button>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li class="nav-item">
+                            <li class="nav-item mx-5">
                                 <a class="nav-link active" aria-current="page" href="#">Accueil</a>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item mx-5">
                                 <a class="nav-link" href="#">Projets</a>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item mx-5">
                                 <a class="nav-link" href="#">Pictos</a>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item logo-container mx-5">
+                                <img src="/img/logo/Logo.svg" class="logo" alt="Logo du site">
+                            </li>
+                            <li class="nav-item mx-5">
                                 <a class="nav-link" href="#">Stage</a>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item mx-5">
                                 <a class="nav-link" href="#">Certifications</a>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item mx-5">
                                 <a class="nav-link" href="#">Contact</a>
                             </li>
                         </ul>
