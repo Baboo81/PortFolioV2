@@ -71,7 +71,7 @@ function loadSection(section) {
             .then(response => response.text())
             .then(data => {
                 //Insérer le contenu dans la div avec l'id "dynamic-section"
-                document.getElementById("dynamic-section").innerHTML = data;
+                document.getElementById("sections-container").innerHTML = data;
             })
             .catch(error => {
                 console.error('Erreur de chargement de la section:', error);

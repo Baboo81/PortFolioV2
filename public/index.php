@@ -24,12 +24,12 @@ $router = new Router();
 
 // Définition des routes
 $router->add('', 'PortfolioController', 'index');       // Page principale (home)
-$router->add('sections/about', 'PortfolioController', 'about'); // Section About
+$router->add('sections/about', 'PortfolioController', 'about', 'GET'); // Section About
 $router->add('sections/projects', 'PortfolioController', 'projects'); // Section Projects
 $router->add('sections/contact', 'PortfolioController', 'contact'); // Section Contact
 
 // Récupération de l'URL
-$url = $_GET['page'] ?? '';
+$url = trim($_SERVER['REQUEST_URI'], '/');
 
 // Dispatch (appel du bon contrôleur et de la bonne méthode)
 $router->dispatch($url);

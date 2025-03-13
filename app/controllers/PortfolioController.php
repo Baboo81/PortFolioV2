@@ -18,9 +18,13 @@ class PortfolioController extends Controller {
     }
 
     public function about() {
-        $title = "Á propos de moi";
+         //Définir le titre de la page
+         $title = "Á propos de moi";
+         //Joindre les styles
+         $resetCss = "reset.css";
+         $css = "style.css";
 
-        $this->view('sections/about', compact('title'));
+        $this->view('sections/about', compact('title', 'resetCss', 'css'));
     }
 
     public function project() {

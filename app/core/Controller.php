@@ -6,7 +6,10 @@ class Controller {
     // Méthode pour charger une vue 
     public function view($view, $data = []) {
         // Extraire les données pour les rendre disponibles dans la vue
-        extract($data);
+        extract($data);//Rend les variables accessibles dans la vue
+        var_dump($view);
+        require_once __DIR__ . "/../views/$view.php";
+        
 
         // Inclure le fichier de vue si il existe
         $viewPath = __DIR__ . '/../views/' . $view . '.php';
