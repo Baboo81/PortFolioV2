@@ -62,15 +62,13 @@ requestAnimationFrame(ballAnimate1);
 //Chargement des pages  
 let sections = ["home", "about", "skills", "picto", "stage", "certif"];
 
-//Fonction pour charger le contenu de chaque section
+// Fonction pour charger le contenu d'une section
 function loadSection(section) {
-    //Vérifie que la section fait partie des sections valides
     if (sections.includes(section)) {
-        //Utilise fetch pour récupérer le contenu de la section
+        // Utilisation de fetch pour récupérer le contenu de la section
         fetch(`sections/${section}.php`)
             .then(response => response.text())
             .then(data => {
-                //Insérer le contenu dans la div avec l'id "dynamic-section"
                 document.getElementById("sections-container").innerHTML = data;
             })
             .catch(error => {
@@ -79,15 +77,26 @@ function loadSection(section) {
     }
 }
 
-// Attache l'événement au clic de chaque lien
-document.querySelectorAll("nav a").forEach(link => {
-    link.addEventListener("click", function(event) {
-        event.preventDefault();
-        
-        // Récupère le nom de la section depuis l'attribut data-section du lien
-        let sectionName = this.getAttribute("data-section");
+//Fonction pour charger le contenu de chaque section
+function onScroll() {
+    // Récupérer la position actuelle du scroll
+    const scrollPosition = window.scrollY;
 
-        // Charge la section correspondante
-        loadSection(sectionName);
-    });
-});
+    // Vérifier dans quelle section on se trouve en fonction de la position de scroll
+    if (scrollPosition < document.getElementById('about').offsetTop) {
+        loadSection("home");
+    } else if (scrollPosition >= document.getElementById('about').offsetTop && scrollPosition < document.getElementById('skills').offsetTop) {
+        loadSection("about");
+    } else if (scrollPosition >= document.getElementById('skills').offsetTop && scrollPosition < document.getElementById('picto').offsetTop) {
+        loadSection("skills");
+    } else if (scrollPosition >= document.getElementById('picto').offsetTop && scrollPosition < document.getElementById('stage').offsetTop) {
+        loadSection("picto");
+    } else if (scrollPosition >= document.getElementById('stage').offsetTop && scrollPosition < document.getElementById('certif').offsetTop) {
+        loadSection("stage");
+    } else if (scrollPosition >= document.getElementById('certif').offsetTop) {
+        loadSection("certif");
+    }
+}
+
+// Attacher l'événement de défilement
+window.addEventListener('scroll', onScroll);

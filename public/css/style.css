@@ -110,6 +110,11 @@ section .hero-content
     min-height: 500px;
 }
 
+section .aboutSection
+{
+    margin-top: 10%;
+}
+
 section .about1
 {
     background-color: var(--bleuVert);

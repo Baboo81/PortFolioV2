@@ -1,8 +1,8 @@
 <?php include __DIR__ . '/../partials/header.php'; ?>
 
 <section id="about">
-    <div class="container">
-        <div class="row">
+    <div class="">
+        <div class="row aboutSection">
             <div class="about1 col-md-4">
                 <img src="" alt="Photo de moi-même">
             </div>
