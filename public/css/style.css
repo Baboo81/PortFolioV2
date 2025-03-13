@@ -102,3 +102,22 @@ section .hero-content
     z-index: 2;
 }
 /* END Section : home */
+
+/* Section : about */
+
+.about
+{
+    min-height: 500px;
+}
+
+section .about1
+{
+    background-color: var(--bleuVert);
+}
+
+section .about2
+{
+    background-color: var(--bleu);
+}
+
+/* END Section : about */
