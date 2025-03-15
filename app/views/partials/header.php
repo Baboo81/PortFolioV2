@@ -46,6 +46,19 @@
                             </li>
                             <li class="nav-item logo-container mx-5">
                                 <img src="/img/logo/Logo.svg" class="logo" alt="Logo du site">
+                                <div class="wrap">
+                                    <!--Heure-->
+                                    <div class="heure"></div>
+        
+                                    <!--Minutes-->
+                                    <div class="minute"></div>
+        
+                                    <!--Secondes-->
+                                    <div class="seconde"></div>
+        
+                                    <!--Point/centre-->
+                                    <div class="point"></div>
+                                </div>
                             </li>
                             <li class="nav-item mx-5">
                                 <a class="nav-link" href="#" data-section="picto">Pictos</a>
