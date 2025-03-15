@@ -1,15 +1,5 @@
 "use strict";
 
-//Footer map:
-
-//Create map:
-const centroid = [50.71036, 4.36889];
-const map = L.map('mapid').setView(centroid, 16.4);
-
-//Add tiles & marker:
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
-L.marker([50.71036, 4.36889]).addTo(map);
-
 //Horloge:
 function clock () {
     //Récupération de : l'heure, des minutes, des secondes:
@@ -29,46 +19,18 @@ function clock () {
     //On utilise setInterval afin d'actualiser l'horloge toutes les secondes:
     setInterval(clock, 1000);
 
-//Animation balls:
-const ball = document.getElementById('logo');
-let leftPos = 0;
-let upDownPos = 0;
-let dir = -1;
-let current_rotation = 0; 
 
-ball.style.position = "absolute";
-
-function ballAnimate1 () {
-
-    if (leftPos == 1900) {
-        dir = 1
-    } else if 
-        (leftPos == -90) {
-        dir = -1
-    }
-    
-    leftPos += -2 * dir;
-    current_rotation += 1;
-    
-
-    ball.style.left = `${leftPos}px`;
-    ball.style.transform = 'rotate('  + current_rotation + 'deg)';
-
-    requestAnimationFrame(ballAnimate1);
-};
-
-requestAnimationFrame(ballAnimate1);
-
-//Chargement des pages  
+// Liste des sections correspondant aux pages
 let sections = ["home", "about", "skills", "picto", "stage", "certif"];
 
-// Fonction pour charger le contenu d'une section
+// Fonction pour charger dynamiquement le contenu d'une section
 function loadSection(section) {
     if (sections.includes(section)) {
-        // Utilisation de fetch pour récupérer le contenu de la section
-        fetch(`sections/${section}.php`)
+        // Utilisation de fetch pour récupérer le contenu de la section (ici un fichier PHP correspondant à chaque section)
+        fetch(`${section}.php`)  // Par exemple, 'about.php'
             .then(response => response.text())
             .then(data => {
+                // Injecter le contenu de la page dans la div appropriée
                 document.getElementById("sections-container").innerHTML = data;
             })
             .catch(error => {
@@ -77,12 +39,12 @@ function loadSection(section) {
     }
 }
 
-//Fonction pour charger le contenu de chaque section
+// Fonction pour gérer le défilement et charger les sections
 function onScroll() {
     // Récupérer la position actuelle du scroll
     const scrollPosition = window.scrollY;
 
-    // Vérifier dans quelle section on se trouve en fonction de la position de scroll
+    // Vérifier dans quelle section on se trouve et charger la section correspondante
     if (scrollPosition < document.getElementById('about').offsetTop) {
         loadSection("home");
     } else if (scrollPosition >= document.getElementById('about').offsetTop && scrollPosition < document.getElementById('skills').offsetTop) {

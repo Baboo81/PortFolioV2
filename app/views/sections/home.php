@@ -16,26 +16,6 @@
     </div>
 </section>
 
-<section id="about">
-    <!-- Contenu de la section About -->
-</section>
-
-<section id="skills">
-    <!-- Contenu de la section Skills -->
-</section>
-
-<section id="picto">
-    <!-- Contenu de la section Picto -->
-</section>
-
-<section id="stage">
-    <!-- Contenu de la section Stage -->
-</section>
-
-<section id="certif">
-    <!-- Contenu de la section Certif -->
-</section>
-
 <section id="sections-container">
 
 </section>

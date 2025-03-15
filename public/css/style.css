@@ -32,7 +32,8 @@ body
 .navbar li a
 {
     color: var(--beige);
-    font-size: 2rem;
+    font-size: clamp(1rem, 2vw, 2rem);
+    white-space: nowrap;
 }
 
 .navbar .logo-container
@@ -53,14 +54,6 @@ body
 /* END NavBAR*/
 
 /*Animation horloge*/
-.clock
-{
-    height: 20em;
-    width: 20em;
-    background: url(../img/svg/Logo.svg) no-repeat;
-    margin-top: 20%;
-}
-
 .wrap
 {
     width: 0px;
@@ -71,11 +64,11 @@ body
 .minute, .heure
 {
     position: absolute;
-    height: 100px;
+    height: 50px;
     width: 6px;
     margin: auto;
     background: black;
-    top: -27%;
+    top: 0% !important;
     left: 0;
     bottom: 0;
     right: 0;
@@ -87,18 +80,15 @@ body
 .minute
 {
     position: absolute;
-    height: 130px;
+    height: 61px;
     width: 4px;
-    top: -38%;
-    left: 0;
-    right: 0;
     transform: rotate(90deg);
 }
 
 .seconde
 {
     position: absolute;
-    height: 90px;
+    height: 61px;
     width: 2px;
     margin: auto;
     left: 0;
@@ -185,3 +175,25 @@ section .about2
 }
 
 /* END Section : about */
+
+/* media queries */
+/*NavBar*/
+
+/* Taille par défaut (mobile) */
+.navbar li a {
+    font-size: 1.2rem;
+}
+
+/* Tablettes */
+@media (min-width: 768px) {
+    .navbar li a {
+        font-size: 1.5rem;
+    }
+}
+
+/* Écrans larges (desktop) */
+@media (min-width: 1024px) {
+    .navbar li a {
+        font-size: 2rem;
+    }
+}
