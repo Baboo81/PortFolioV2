@@ -26,7 +26,7 @@ let sections = ["home", "about", "skills", "picto", "stage", "certif"];
 // Fonction pour charger dynamiquement le contenu d'une section
 function loadSection(section) {
     if (sections.includes(section)) {
-        // Utilisation de fetch pour récupérer le contenu de la section (ici un fichier PHP correspondant à chaque section)
+        // Utilisation de fetch pour récupérer le contenu de la section (par exemple, 'about.php')
         fetch(`${section}.php`)  // Par exemple, 'about.php'
             .then(response => response.text())
             .then(data => {

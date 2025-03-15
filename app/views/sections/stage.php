@@ -1,6 +1,6 @@
 <?php include __DIR__ . '/../partials/header.php'; ?>
 
-<section id="skills">
+<section id="stage">
     <div class="">
         <div class="row aboutSection">
             <div class="about1 col-md-4">
